@@ -65,7 +65,7 @@ jobs:
           PROMPT="$(printf '%s\n\nCustom instructions:\n%s' \
             "$MESSAGE" "$CUSTOM_INSTRUCTIONS")"
 
-          opencode run --model "$MODEL" "$PROMPT"
+          opencode run --yolo --model "$MODEL" "$PROMPT"
 
       - name: Commit and push changes
         if: ${{ inputs.push_changes }}
